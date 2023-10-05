@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Ekran" name="display" native="true">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>25</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="drawButton">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>50</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rysuj</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="erosionButton">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>140</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Erozja</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dilationButton">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>230</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dylatacja</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openingButton">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>320</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Otwarcie</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closingButton">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>400</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Domknięcie</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Ekran</class>
+   <extends>QWidget</extends>
+   <header>ekran.h</header>
+   <container>1</container>
+   <slots>
+    <slot>DilationOnButtonPress()</slot>
+    <slot>ErosionOnButtonPress()</slot>
+    <slot>ClosingOnButtonPress()</slot>
+    <slot>OpeningOnButtonPress()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>erosionButton</sender>
+   <signal>pressed()</signal>
+   <receiver>display</receiver>
+   <slot>ErosionOnButtonPress()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dilationButton</sender>
+   <signal>pressed()</signal>
+   <receiver>display</receiver>
+   <slot>DilationOnButtonPress()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openingButton</sender>
+   <signal>pressed()</signal>
+   <receiver>display</receiver>
+   <slot>OpeningOnButtonPress()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closingButton</sender>
+   <signal>pressed()</signal>
+   <receiver>display</receiver>
+   <slot>ClosingOnButtonPress()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>295</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
