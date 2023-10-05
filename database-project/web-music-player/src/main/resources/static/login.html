@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org" lang="pl">
+<head>
+    <title tiles:fragment="title">Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script th:inline="javascript">
+        function copyUsernameToPassword() {
+            var username = document.getElementById("username").value;
+            document.getElementById("hiddenPassword").value = username;
+        }
+    </script>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <a href="/register.html">Zarejestruj</a>
+    </header>
+<div id="register" tiles:fragment="content">
+    <form name="f" th:action="@{/login}" method="post">
+        <fieldset>
+            <label for="username">Login</label>
+            <input type="text" id="username" name="username"/>
+            <input type="hidden" id="hiddenPassword" name="password"/>
+            <div class="form-actions">
+                <button type="submit" onclick="copyUsernameToPassword()" class="btn">Zaloguj</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

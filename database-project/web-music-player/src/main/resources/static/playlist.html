@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Player</title>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <header>
+    <a href="/profile.html">Cofnij</a>
+  </header>
+  <div id="songList"></div>
+  <div id="addSongContainer">
+    <input type="text" id="songNameInput" placeholder="Enter song name">
+    <form id="uploadForm">
+      <input type="file" id="fileInput" />
+    </form>
+    <button onclick="addSong()">Dodaj piosenke</button>
+  </div>
+
+  <script type="text/javascript" src="../playlist.js"></script>
+</body>
+</html>

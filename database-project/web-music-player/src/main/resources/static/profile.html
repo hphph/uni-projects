@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<header>
+    <h1>Profil</h1>
+    <a href="../all.html">wszystkie piosneki</a>
+</header>
+
+<main>
+    <h2 id="username">Username</h2>
+    <section id="playlists">
+        <!-- Add more playlists here -->
+    </section>
+</main>
+
+<div class="overlay" id="popup">
+    <div class="popup-wrapper">
+        <h2>Uzupełnij dane playlisty</h2>
+        <a href="#" class="close">&times;</a>
+        <div class="content">
+            <div class="container-popup">
+                <label>Nazwa playlisty</label>
+                <input type="text" id="playlistName" placeholder="Nazwa twojej playlisty">
+                <label>Czy będziesz uplodował piosenki</label>
+                <input type="checkbox" id="isPrimary">
+                <form>
+                    <label for="image">Zdjęcie playlisty</label>
+                    <input type="file" id="image">
+                </form>
+                <button onclick="addPlaylist()">Zapisz playlistę</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>
